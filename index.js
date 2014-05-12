@@ -12,7 +12,7 @@ module.exports = function(opt){
         var barcode_type;
         barcode_types.forEach(function(it_barcode, i){
             if(it_barcode.indexOf(opt.barcode_type) >= 0){
-                barcode_type = "fonts/" + barcode_types[i];
+                barcode_type = fonts + barcode_types[i];
             }
         });
 
