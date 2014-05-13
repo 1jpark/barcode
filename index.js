@@ -18,10 +18,11 @@ module.exports = function(opt){
 
         if(!barcode_type) return reject("unsupported barcode type");
 
-        gm(original)
+
+        gm(200, 150, "transparent")
             .font(barcode_type, 80)
             .drawText(0, 0, opt.text, "center")
-            .toBuffer(function (err, buffer) {
+            .toBuffer("png", function (err, buffer) {
                 if (err) return reject(err);
                 resolve(buffer);
             });
